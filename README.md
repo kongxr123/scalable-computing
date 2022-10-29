@@ -4,9 +4,9 @@ review and make some note about scalable computing
 
 Performance/Threads：clocks,sizes,buses,cores
 -----------------
-1）Talking about clocks, chord sizes and buses and Memory Wall leading into the VF carbon power and power.   
+1)Talking about clocks, chord sizes and buses and Memory Wall leading into the VF carbon power and power.   
 
-2）what happens with the clocks and cores decides the bosse, is fairly self evident:If you run at a higher clock speed, you will generally manage to perform more computations more operations per cycle if you have more cores running in parallel, that gives you more available compute resource.  
+2)what happens with the clocks and cores decides the bosse, is fairly self evident:If you run at a higher clock speed, you will generally manage to perform more computations more operations per cycle if you have more cores running in parallel, that gives you more available compute resource.  
 
 3)And driving up the clock speed leads you towards this VF curve, this voltage frequency relationship which we'll come to in a second in general if you drive up the operation frequency, you're going to consume more power you're doing more operations per cycle.  
 
@@ -20,15 +20,12 @@ __In general, if you speed up the overall soc. So you bring the voltage up, you 
 名词解释
 -----------------
 __cache__:  
-So a cache is essentially a particular type of memories, particular area of memory, that has dedicated processes associated with it.And its purpose is to try to predict the data you're going to need.  
-3)cache和cpu的关系：Like it is one of its purposes now. It's only when it its purpose is to try to predict the data or the information or the instructions you're going to need next that will introduce you're going to need to enable the instructions that the CPU is mostly to run next.  
-
-4）example：Because what's happened is, you know, you have the two primary CPU, the primary core, and it's going to do one plus one. And the normal thing it does is it takes that result to add adds to the next one. So that second, the third number one, so one plus one first two ones, the third one is sitting in memory and storage waiting to be used. 
-
-如果预测错了怎么办：But essentially we're doing is in that situation, the cache is making a prediction is having a guess, if it gets it wrong, has consumed some power. There's no harm done nothing has been lost. It's just made a bad. And the overall operation slows down slightly.
-
-5）Caching and good cache prediction is an important thing for our CICS in particular.  
-__CICS__：CICS是IBM公司的强大主机交易服务器、整合平台，在全球C、C++、COBOL等交易中间件市场上占有绝大多数客户  
+1)So a cache is essentially a particular type of memories, particular area of memory, that has dedicated processes associated with it.And its purpose is to try to predict the data you're going to need.  
+2)cache和cpu的关系：Like it is one of its purposes now. It's only when it its purpose is to try to predict the data or the information or the instructions you're going to need next that will introduce you're going to need to enable the instructions that the CPU is mostly to run next.  
+3)example：Because what's happened is, you know, you have the two primary CPU, the primary core, and it's going to do one plus one. And the normal thing it does is it takes that result to add adds to the next one. So that second, the third number one, so one plus one first two ones, the third one is sitting in memory and storage waiting to be used. 
+4)Caching and good cache prediction is an important thing for our CICS in particular.  
+__CICS__：CICS是IBM公司的强大主机交易服务器、整合平台，在全球C、C++、COBOL等交易中间件市场上占有绝大多数客户    
+如果预测错了怎么办：But essentially we're doing is in that situation, the cache is making a prediction is having a guess, if it gets it wrong, has consumed some power. There's no harm done nothing has been lost. It's just made a bad. And the overall operation slows down slightly.   
 
 __cache hit rate__  
 1）the cache hit rate as it's known is much, much higher
@@ -51,7 +48,7 @@ Amdahl/Gustafson's law:
 一、Amdahl（阿姆达尔定律）
 加速比定义
 
-      加速比 = 优化前系统耗时 / 优化后系统耗时.  
+加速比 = 优化前系统耗时 / 优化后系统耗时.  
 
 所谓加速比就是优化前的耗时和优化后的耗时的比值。加速比越高，表明优化效果越明显。   
 
@@ -100,6 +97,10 @@ The notion that as demand increases, you can spin up more instances that you can
 
 简单来说就是内存的性能提升太慢，导致计算机的计算能力提升达到一定的瓶颈      
 即使再增加处理器的核数，也无法提高综合计算能力（实际上超过16核，就已经不会对性能有多大提升了）     
+
+一般来说，CPU速度已经超过了构成的内容。如果您喜欢RAM，这就是为什么你以不同的方式开始缓存，等等。但是GPU非常特别，因为很多GPU，在从事内存密集型活动时，从中提取大量的数据文件并将其推出数据回内存进行包装。因此，这是GPU的一个约束，它一直是导致CPU或GPU速度的原因之一。时钟速度保持在低位，但它是激励还是优势。超速不是线性的，因为您正在围绕内存吞吐量等各种问题遇到各种问题。  
+__RAM__: 
+RAM，是指随机存取存储器（random access memory，RAM）又称作“随机存储器”，是与CPU直接交换数据的内部存储器，也叫主存(内存)。它可以随时读写，而且速度很快，通常作为操作系统或其他正在运行中的程序的短时间临时数据存储媒介。计算机首先从存储盘将用户请求的程序或文档加载到内存，然后从内存中访问每条信息。由于许多操作均依赖于内存，因此RAM 容量在系统性能方面起着至关重要的作用。     
 
 In GPUs you'll often see them aiming for maybe 25 to 50 the throughput. Totally, I have an memory give me 50. But then we touched on earlier in terms of what's happening with CPUs, GPUs in particular is they're now able to work and operate and process data at a speed that simply faster than they did to design characteristic of the actual memory chips can keep up with. So if you buy a memory CAP, you'll see there are various numbers of like CAS and latency and stuff like that. And they're related to the number of cycles number of instruction cycles number of Read, write operations required to read or write from that you know it okay, it's not meant to be a hit circus.
 
@@ -150,15 +151,9 @@ CAS是compare and swap的缩写，就是比较并替换的意思。
 1）大多数这些事件的物理特征，实际的重写方式，都可以操作。因此，您可以大大加快它们的速度。您必须重新设计它们，每次都使用不同的内存技术来执行此操作。  
 
 
-
-
+冷却
+-----------------
 Most of those events physical characteristic, how the actual rewrites are, can operate. So you can significantly speed them up. You have to redesign them every use a different memory technology to do so. So in general CPU speeds have been exceeding what constitutes.  
-
-__RAM__: 
-RAM，是指随机存取存储器（random access memory，RAM）又称作“随机存储器”，是与CPU直接交换数据的内部存储器，也叫主存(内存)。它可以随时读写，而且速度很快，通常作为操作系统或其他正在运行中的程序的短时间临时数据存储媒介。计算机首先从存储盘将用户请求的程序或文档加载到内存，然后从内存中访问每条信息。由于许多操作均依赖于内存，因此RAM 容量在系统性能方面起着至关重要的作用。   
-
-一般来说，CPU速度已经超过了构成的内容。如果您喜欢RAM，这就是为什么你以不同的方式开始缓存，等等。但是GPU非常特别，因为很多GPU，在从事内存密集型活动时，从中提取大量的数据文件并将其推出数据回内存进行包装。因此，这是GPU的一个约束，它一直是导致CPU或GPU速度的原因之一。时钟速度保持在低位，但它是激励还是优势。超速不是线性的，因为您正在围绕内存吞吐量等各种问题遇到各种问题。  
-
 
 __voltage and frequency__:  
 Most modern CPUs, particularly Cisco devices, have this capacity to dynamically scale their voltage and frequency requirements or demands.   
@@ -171,6 +166,10 @@ Most desktop CPUs, you know, the sort of KCC sitting under a desk in the lab or 
 
 __CUDA__：是流处理器是直接将多媒体的图形数据流映射到流处理器上进行处理的.  
 
+
+晶体
+-----------------
+
 __photomask or photorag Radical radical drive__：  
 因此，这在很大程度上归因于制造过程和更大需求的结合，消费者需求来自你和我对比特币矿工的需求，每个GPU的每张卡具有更大的处理能力范式区域，因此像Nvidia这样的制造商已经做出了某种反应，生产不同的屏蔽胶带。它的不同之处在于它被称为光掩模或光撕裂激进的激进驱动器，所以我是一个问题。这基本上是他们今天用来传输魔术图案的图案装置。因此，他们一直在努力解决这些问题，并改进您可以想象的那些。我想这样做的一个结果是，你现在可以在给定的CPU或GPU上做并执行更多的操作，部分原因是我们有更多的晶体管，我们有更多的流水线架构，因为更精细的分辨率，更精细的光掩模粒度，但也因为我们只是简单地添加更多，所以它也需要一个给定的需求，我们像人工智能一样思考， 您现在可以购买专用的GPU，这些GPU具有称为AI内核的张量内核，该张量内核实现了您在TensorFlow中找到的一些功能。
 
@@ -180,7 +179,7 @@ __光掩模__：
 __A FinFET Field Effect Transistor process__：  
 It's an 18 point 6 billion transistors on the on the device with DDR D DDR six memory for speed, and 50 Gig bandwidth 25 or 25 or 25 and 25 hours, but 18 point 6 billion transistors on a die or a GPU. So the scale of what's going on now is enormous, but each of those 18 point 6 billion transistors needs to be powered, hmm constitutes a switching operation.So the scale of what we're talking about here is enormous. 
 鳍式场效应晶体管( FinFET ) 是一种多栅极器件，一种MOSFET（金属氧化物半导体场效应晶体管），构建在基板上，栅极位于通道的两个、三个或四个侧面或环绕沟道，形成双栅甚至多栅结构。这些器件被赋予通用名称“FinFET”，因为源/漏区在硅表面上形成鳍。与平面CMOS（互补金属氧化物半导体）技术相比，FinFET 器件具有明显更快的开关时间和更高的电流密度。  
-FinFET 是一种非平面晶体管，或“3D”晶体管。[2]它是现代纳米电子 半导体器件制造的基础。使用 FinFET 栅极的微芯片在 2010 年代上半年首次商业化，并成为14 nm、10 nm和7 nm工艺节点的主要栅极设计。   
+FinFET 是一种非平面晶体管，或“3D”晶体管。它是现代纳米电子 半导体器件制造的基础。使用 FinFET 栅极的微芯片在 2010 年代上半年首次商业化，并成为14 nm、10 nm和7 nm工艺节点的主要栅极设计。   
 
 Dennard Scaling
 -----------------
