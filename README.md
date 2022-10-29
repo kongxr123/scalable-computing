@@ -42,7 +42,7 @@ __prefix Caching__：
 but essentially it's a type of prefix caching so you make your original connection your browser Netflix catalog for example.
 
 __Netflix__:  
-会员：因此，例如，您将原始连接设置为浏览器Netflix目录。而Netflix的做法略有不同。网飞不是一个很好的例子。但是，让我们以Netflix为例，因为它是一个常见的问题。让我们采取Prime，以便您浏览Netflix或Prime目录，选择一些您开始观看的东西，您开始观看的流的初始部分或多或少地来自一个更集中的服务器，本质上是一个直接连接到计费和内容管理系统的服务器，以建立例如许可证来做到这一点， 有时他们给你5或10分钟，你知道，30秒，60秒作为测试或收费之前等。因此，一般来说，您将提出请求，当您开始观看该内容时，您将被指向该内容的来源之一，因为您知道，要对它使用各种算法和方法，而不是观看它。网络想要做的一件事是将流量输送的负担从他们更集中的系统卸载，在那里他们进行计费和收费以及一些辅助系统，而辅助系统本质上是一种比你更靠近你的设备，在我们描述的某些方式中，它比中央系统更接近你。我们真的想将您与该电影流的实例联系起来，该实例在物理上或地理上更接近该实例，并且网络术语更接近于您作为中央网络资源的消耗要少得多。同样，使用缓存可以使用特定类型的前缀缓存。这里基本上是相同的原则。我们是移动所有接近的副本的人，或者我们希望将您连接到更接近的数据的副本，因为它可以更快地到达您那里。它使用较少的网络资源。它与您联系更紧密，如您所知，更低的延迟，更高的吞吐量等，中央副本是这样的，因此缓存的概念，您知道，这不是一个新的或令人兴奋的或原始的概念，您如何实现它因地而异，因为不同内容类型的不同性质，但是让东西离您更近并让它坐在那里等着您，因为我们认为您可能想要这是您将在任何高吞吐量或高输送系统上遇到的常规操作。原则上，侧系统在相同的基础上工作。      
+会员：因此，例如，您将原始连接设置为浏览器Netflix目录。而Netflix的做法略有不同。网飞不是一个很好的例子。但是，让我们以Netflix为例，因为它是一个常见的问题。让我们采取Prime，以便您浏览Netflix或Prime目录，选择一些您开始观看的东西，您开始观看的流的初始部分或多或少地来自一个更集中的服务器，本质上是一个直接连接到计费和内容管理系统的服务器，以建立例如许可证来做到这一点， 有时他们给你5或10分钟，你知道，30秒，60秒作为测试或收费之前等。因此，一般来说，您将提出请求，当您开始观看该内容时，您将被指向该内容的来源之一，因为您知道，要对它使用各种算法和方法，而不是观看它。网络想要做的一件事是将流量输送的负担从他们更集中的系统卸载，在那里他们进行计费和收费以及一些辅助系统，而辅助系统本质上是一种比你更靠近你的设备，在我们描述的某些方式中，它比中央系统更接近你。我们真的想将您与该电影流的实例联系起来，该实例在物理上或地理上更接近该实例，并且网络术语更接近于您作为中央网络资源的消耗要少得多。同样，使用缓存可以使用特定类型的前缀缓存。这里基本上是相同的原则。我们是移动所有接近的副本的人，或者我们希望将您连接到更接近的数据的副本，因为它可以更快地到达您那里。它使用较少的网络资源。它与您联系更紧密，如您所知，更低的延迟，更高的吞吐量等，中央副本是这样的，因此缓存的概念，您知道，这不是一个新的或令人兴奋的或原始的概念，您如何实现它因地而异，因为不同内容类型的不同性质，但是让东西离您更近并让它坐在那里等着您，因为我们认为您可能想要这是您将在任何高吞吐量或高输送系统上遇到的常规操作。原则上，系统在相同的基础上工作。      
 
 
 Amdahl/Gustafson's law:
@@ -87,12 +87,22 @@ The notion that as demand increases, you can spin up more instances that you can
 物理角度的问题 ：因此，如果我有一定的尺寸或一定的最大尺寸，我的集成电路将无法超越。为了超越这一点，我对可以放在它上面的一定大小的电路数量施加了物理限制。因此，如果我有一英寸见方的东西，我可以在14纳米工艺上放置多少个晶体管？这就是计算，它可以在芯片设计软件上完成非常非常快，进入一个布局的事情，你如何处理热量，以最小化你的连接长度和你的互连？所有这些东西都成了一个问题。因此，尺寸是这些限制之一，无论是在物理方面，还是在我们有一个典型的芯片尺寸封装，适合我们进行冷却，你知道，对于芯片支架和载体以及类似的东西。
 
 但与物理相关的是，实际集成电路的尺寸是电路本身的大小之一。所以说实际的制造技术尺寸，是14米还是10米，都是我们的14纳米。10纳米7纳米。一般来说，量子变化的变化是否会在制造过程中的增量变化的重大变化将在5到7到10年之间，仅仅是因为芯片制造商在建造新晶圆厂设施时所涉及的持续时间召回，如你所知， 英特尔在leixlip中有一些，并且正在谈论建立一个新的和目标，但通常需要五到七年的时间来建立工厂。   
-所以，如果我们看你知道，14或1211 10 Seven现在谈论，你正在看近一代人，近10年，十年前，当新一代或近十年前，你将真正看到这一点并制造。这就是采取这些步骤所涉及的那种提前期。下。因此，从物理学的角度来看，我们所在的技术公司非常接近于我们所能做的实际极限。因此，随着芯片尺寸变得越来越小，并且您知道精确到1412 10纳米尺度，物理影响电子的实际物理效果如何和不泄漏电流等，开始变得更加显着。 
+所以，如果我们看你知道，14或1211 10 Seven现在谈论，近10年，十年前，当新一代或近十年前，你将真正看到这一点并制造。这就是采取这些步骤所涉及的那种提前期。下。因此，从物理学的角度来看，我们所在的技术公司非常接近于我们所能做的实际极限。因此，随着芯片尺寸变得越来越小，并且您知道精确到1412 10纳米尺度，物理影响电子的实际物理效果如何和不泄漏电流等，开始变得更加显着。 
 
 问题出现：泄漏电流   
 他们确定问题是什么，识别出泄漏来自哪里，他们重新设计一个电路。但是，尽管需要意识到这一点，但这并不是一件容易的事。当您扩展某些内容时，请纵向扩展或缩减。您将开始遇到这些外部第三方约束。一旦您在手机上编程，这些约束不仅会进入您的计算机。   
-当他们将建模转化为测试，我已经尝试过了，看到每周期的指令成本大约随着面积的平方根而增加。  
-但是你消耗更多的功率，因为你现在有一个你有一个更大的面积。所以一般来说，你不会得到线性缩放。如果你把你的模具面积加倍，只要你做了那个封装的实际尺寸。你不会在那裡和周围得到双倍的速度。还要记住，如果我使实际的软件包在物理上更大的网站，并且我们有更多区域用于思科架构，这是一个复杂的架构。我变得复杂多了。需要存在更多的领域，现在有更多的路径将存在。因此，在尝试扩展时，您总是会遇到这种CAP，只是使用房地产来扩展某些东西。我们之前谈论的东西越多。
+
+
+
+内存墙（memory wall）
+-----------------
+在过去的20多年中,处理器的性能以每年大约55%速度快速提升，而内存性能的提升速度则只有每年10%左右。长期累积下来，不均衡的发展速度造成了当前内存的存取速度严重滞后于处理器的计算速度，内存瓶颈导致高性能处理器难以发挥出应有的功效，这对日益增长的高性能计算(High Performance Computing,HPC)形成了极大的制约。事实上，早在1994年就有科学家分析和预测了这一问题，并将这种严重阻碍处理器性能发挥的内存瓶颈命名为"内存墙"(Memory Wall)      
+
+简单来说就是内存的性能提升太慢，导致计算机的计算能力提升达到一定的瓶颈      
+即使再增加处理器的核数，也无法提高综合计算能力（实际上超过16核，就已经不会对性能有多大提升了）     
+
+In GPUs you'll often see them aiming for maybe 25 to 50 the throughput. Totally, I have an memory give me 50. But then we touched on earlier in terms of what's happening with CPUs, GPUs in particular is they're now able to work and operate and process data at a speed that simply faster than they did to design characteristic of the actual memory chips can keep up with. So if you buy a memory CAP, you'll see there are various numbers of like CAS and latency and stuff like that. And they're related to the number of cycles number of instruction cycles number of Read, write operations required to read or write from that you know it okay, it's not meant to be a hit circus.
+
 
 __CAP__:  
 分布式系统正变得越来越重要，大型网站几乎都是分布式的。分布式系统的最大难点，就是各个节点的状态如何同步。CAP 定理是这方面的基本定理，也是理解分布式系统的起点。
@@ -111,9 +121,7 @@ Eric Brewer 说，这三个指标不可能同时做到。这个结论就叫做 C
 
 bus----->IPC（Inter-Process Communication，进程间通信）。进程间通信是指两个进程的数据之间产生交互：
 ----------------- 
-一般来说，您有不同类型的总线，有人将数据移入和移出外部存储设备，移入和移出内存，通常是在他们的 CPU 内，当然还有他们自己在非常高吞吐量的主干中。     
-
-In GPUs, for example, you'll often see them aiming for maybe 25 to 50 the throughput and that'll be fairly common. Totally, I have an Easter eggs give me 50. But then we touched on earlier in terms of what's happening with CPUs, GPUs in particular is they're now able to work and operate and process data at a speed that simply faster than they did to design characteristic of the actual memory chips can keep up with. So if you buy a memory cap, you'll see there are various numbers of like CAS and latency and stuff like that. And they're related to the number of cycles number of instruction cycles number of Read, write operations required to read or write from that you know it okay, it's not meant to be a hit circus.  
+有不同类型的总线，将数据移入和移出外部存储设备，移入和移出内存，通常是在他们的CPU内和在他们自己非常高吞吐量的主干中。     
 
 IPC(Inter-Process Communication)进程间通信，提供了各种进程间通信的方法。在Linux C编程中有几种方法.  
 (1) 半双工Unix管道.  
@@ -123,7 +131,6 @@ IPC(Inter-Process Communication)进程间通信，提供了各种进程间通信
 (5) 共享内存. 
 (6) 网络Socket. 
 
-In GPUs, for example, you'll often see them aiming for maybe 25 to 50 the throughput and that'll be fairly common. Totally, I have an Easter eggs give me 50. But then we touched on earlier in terms of what's happening with CPUs, GPUs in particular is they're now able to work and operate and process data at a speed that simply faster than they did to design characteristic of the actual memory chips can keep up with. So if you buy a memory cap, you'll see there are various numbers of like CAS and latency and stuff like that. And they're related to the number of cycles number of instruction cycles number of Read, write operations required to read or write from that you know it okay, it's not meant to be a hit circus.     
 
 CAS：
 -----------------
@@ -187,12 +194,6 @@ __Tensor Cores__就是一种专为深度学习而设计的计算核心，与FP32
 一般来说，如果你去更高的频率，这意味着更多的功率。如果你去更高的电压意味着更多的功率，更多的功率意味着更高的温度，所以你通常需要冷却，因为我们把更多的晶体管放在一个芯片上意味着更多的功率。电力表现为热量。这就是为什么你有电压调节，频率调节等。还有该中心的正常解决方案。当您迁移到数据中心时，云的冷却将成为一个巨大的挑战。这也是为什么如此多的数据中心建在更温和的地区的原因之一。因此，与其将它们建在沙漠中，依靠大量的电力，大量的深奥冷却剂并卸载昂贵的电路，不如将它们放在更凉爽的地方，让环境来做。温暖气氛。这基本上就是为什么我们最终在爱尔兰拥有大量数据中心的原因，我们有一个更温和的气候。有些时候，像爱尔兰这样的灾难性温带气候，通常约为成本的三分之一，一半的成本用于冷却。。如果你把自己带到一个更温暖的环境，沙漠环境或美国的部分地区，你会看到70%到80%的成本用于冷却。因此，能够定位在像爱尔兰这样的温带气候中，提供导电性，可以节省大量资金。
 
 
-内存墙（memory wall）
------------------
-在过去的20多年中,处理器的性能以每年大约55%速度快速提升，而内存性能的提升速度则只有每年10%左右。长期累积下来，不均衡的发展速度造成了当前内存的存取速度严重滞后于处理器的计算速度，内存瓶颈导致高性能处理器难以发挥出应有的功效，这对日益增长的高性能计算(High Performance Computing,HPC)形成了极大的制约。事实上，早在1994年就有科学家分析和预测了这一问题，并将这种严重阻碍处理器性能发挥的内存瓶颈命名为"内存墙"(Memory Wall)   
-
-简单来说就是内存的性能提升太慢，导致计算机的计算能力提升达到一定的瓶颈   
-即使再增加处理器的核数，也无法提高综合计算能力（实际上超过16核，就已经不会对性能有多大提升了）  
 
 
 
