@@ -162,9 +162,12 @@ Most modern CPUs, particularly Cisco devices, have this capacity to dynamically 
 On the other hand, if I have, you know, a heavy workload, being able to increase ultimate sort of my maximum design voltage and run at a higher frequency, means I'd get through the workload more quickly, but at the cost of producing more heat, and you would be surprised at quite, you know, how much power you can save by simply dynamically adjusting the voltage and frequency. So if you look over here at this table, this is sort of showing you the power consumption for well power consumption performance for a particular technology, depending on relatively small changes. So I think 14 plus plus one（交流电？） allowed far better dynamic voltage and frequency scaling than the straight（直流） 14 did.    
 
 Most desktop CPUs, you know, the sort of KCC sitting under a desk in the lab or something had worked were reasonably happily on sort of 100 watt power supplies for a long time.  
-而且，最近，特别是一些较新的CPU和多个GPU的存在发生了变化，并且已经增加了。所以当时，如果我买了一张GPU卡，在插入GPU之前，我必须更换台式机和机器中的CPU电源单元，或者没有足够的CPU电源。我通常必须添加一些从100瓦260或200瓦开始的东西。因此，当时高端GPU，向机器添加GPU可能会增加100瓦的消耗，这并不像100瓦灯泡那样小，当你每天24小时运行它时，它并不小。如今，如果您想添加高端GPU或GPU卡，也许是具有多个CUDA内核的卡，您可能会看到该卡需要O 400 500瓦的功率，仅用于GPU卡。  
 
-__CUDA__：是流处理器是直接将多媒体的图形数据流映射到流处理器上进行处理的.  
+而且，最近，特别是一些较新的CPU和多个GPU的存在发生了变化，并且已经增加了。所以当时，如果我买了一张GPU卡，在插入GPU之前，我必须更换台式机和机器中的CPU电源单元，或者没有足够的CPU电源。我通常必须添加一些从100,260或200瓦的东西。因此，当时高端GPU，向机器添加GPU可能会增加100瓦的消耗，这并不像100瓦灯泡那样小，当你每天24小时运行它时，它并不小。如今，如果您想添加高端GPU或GPU卡，也许是具有多个CUDA内核的卡，您可能会看到该卡需要400,500瓦的功率，仅用于GPU卡。  
+
+__CUDA__：是流处理器是直接将多媒体的图形数据流映射到流处理器上进行处理的.   
+
+一般来说，如果你去更高的频率，这意味着更多的功率。如果你去更高的电压意味着更多的功率，更多的功率意味着更高的温度，所以你通常需要冷却，因为我们把更多的晶体管放在一个芯片上意味着更多的功率。电力表现为热量。这就是为什么你有电压调节，频率调节等。还有该中心的正常解决方案。当您迁移到数据中心时，云的冷却将成为一个巨大的挑战。这也是为什么如此多的数据中心建在更温和的地区的原因之一。因此，与其将它们建在沙漠中，依靠大量的电力，大量的深奥冷却剂并卸载昂贵的电路，不如将它们放在更凉爽的地方，让环境来做。温暖气氛。这基本上就是为什么我们最终在爱尔兰拥有大量数据中心的原因，我们有一个更温和的气候。有些时候，像爱尔兰这样的灾难性温带气候，通常约为成本的三分之一，一半的成本用于冷却。。如果你把自己带到一个更温暖的环境，沙漠环境或美国的部分地区，你会看到70%到80%的成本用于冷却。因此，能够定位在像爱尔兰这样的温带气候中，提供导电性，可以节省大量资金。
 
 
 晶体
@@ -190,7 +193,7 @@ Dennard Scaling，其大致意思是，虽然晶体管尺寸在每一代产品�
 一旦你进入更高的泄漏电流，你可以停止你的芯片熔化，因为你有VI关系的功率。因此，如果降低电压，那么将降低功率，在这种情况下，将使用产生的泥热。因此，对任何东西的缩放都有一个合理的实用限制。  
 __Tensor Cores__就是一种专为深度学习而设计的计算核心，与FP32的训练相比，可以提供效率更高的训练性能和推理性能。在这样超强的运算效率基础上，能够让计算机视觉、自然语言处理、语音识别与文字转换、个性化推荐等过去CPU难以实现的功能也得以高速完成计算！
 
-一般来说，如果你去更高的频率，这意味着更多的功率。如果你去更高的电压意味着更多的功率，更多的功率意味着更高的温度，所以你通常需要冷却，因为我们把更多的晶体管放在一个芯片上意味着更多的功率。电力表现为热量。这就是为什么你有电压调节，频率调节等。还有该中心的正常解决方案。当您迁移到数据中心时，云的冷却将成为一个巨大的挑战。这也是为什么如此多的数据中心建在更温和的地区的原因之一。因此，与其将它们建在沙漠中，依靠大量的电力，大量的深奥冷却剂并卸载昂贵的电路，不如将它们放在更凉爽的地方，让环境来做。温暖气氛。这基本上就是为什么我们最终在爱尔兰拥有大量数据中心的原因，我们有一个更温和的气候。有些时候，像爱尔兰这样的灾难性温带气候，通常约为成本的三分之一，一半的成本用于冷却。。如果你把自己带到一个更温暖的环境，沙漠环境或美国的部分地区，你会看到70%到80%的成本用于冷却。因此，能够定位在像爱尔兰这样的温带气候中，提供导电性，可以节省大量资金。
+
 
 
 
